@@ -12,11 +12,16 @@ const playnote = event =>{
     audio.play();
 }
 
-buttons.forEach(button => button.addEventListener('click', playnote));
+buttons.forEach(
+    button => button.addEventListener('click', playnote)
+    );
 
 const keyNoteDown = event =>{
-
+    console.log(event);
     const key = event.key;
+    console.log(key);
+    const button = document.querySelector(`button[data-key="${key}"]`);
+    if(button) button.click();
 }
 
 document.addEventListener('keydown', keyNoteDown);
