@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <button data-key="1" data-note="Do">Do</button>
+        <button data-key="1" data-note="Do" onmousedown="sound.play()">Do</button>
         <button data-key="2" data-note="DoSharp" class="sharp">Do#</button>
         <button data-key="3" data-note="Re">Re</button>
         <button data-key="4" data-note="ReSharp" class="sharp">Re#</button>
@@ -20,7 +20,7 @@
         <button data-key="w" data-note="Si">Si</button>
 
         <audio id="AudioDo" src="audio/Do.mp3"></audio>
-        <audio id="AudioDoSharp" src="audio/DoSharp.mp3"></audio>
+        <audio id="AudioDoSharp" src="audio/DoSharp.mp3"></audio>'
         <audio id="AudioRe" src="audio/Re.mp3"></audio>
         <audio id="AudioReSharp" src="audio/ReSharp.mp3"></audio>
         <audio id="AudioMi" src="audio/Mi.mp3"></audio>
