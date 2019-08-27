@@ -6,13 +6,10 @@ const playnote = event =>{
     const note = button.dataset.note;
     const audioId = `Audio${note}`;
     const audio = document.getElementById(audioId);
-    console.log(audio);
+    //console.log(audioId);
     audio.pause();
     audio.currentTime = 0;
     audio.play();
 }
 
-buttons.forEach(
-    button => button.addEventListener('click', playnote)
-    
-);
+buttons.forEach(button => button.addEventListener('click', playnote));
