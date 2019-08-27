@@ -1,13 +1,17 @@
 
 const buttons = document.querySelectorAll('button');
-//const audio = document.getElementById("AudioDo");
-const sound = new Audio();
-sound.src = "audio/Do.mp3";
 
 const playnote = event =>{
-    console.log(event.target.dataset.note);
-    
+    const button =event.target;
+    const note = button.dataset.note;
+    const audioId = `Audio${note}`;
+    const audio = document.getElementById(audioId);
+    console.log(audio);
+    audio.pause();
+    audio.currentTime = 0;
+    audio.play();
 }
+
 buttons.forEach(
     button => button.addEventListener('click', playnote)
     
